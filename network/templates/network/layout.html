@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/solid.css" integrity="sha384-TN9eFVoW87zV3Q7PfVXNZFuCwsmMwkuOTOUsyESfMS9uwDTf7yrxXH78rsXT3xf0" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/fontawesome.css" integrity="sha384-PRy/NDAXVTUcXlWA3voA+JO/UMtzWgsYuwMxjuu6DfFPgzJpciUiPwgsvp48fl3p" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% block script %}
+        {% endblock %}
+    </head>
+
+    <style>
+ 
+
+    </style>
+
+    <body>
+        
+        <div class="topnav">
+            <a class="active" href="#">Network</a>
+        
+            {% if user.is_authenticated %}
+            <a href="{% url 'following' %}">Following</a>
+            {% endif %}
+        
+            <a href="{% url 'index' %}">All Posts</a>
+        
+            <div class="topnav-right">
+        
+                {% if user.is_authenticated %}
+                    <a href="#" style="color: rgb(27, 151, 253);">{{ user.username }}</a>
+        
+                    <a href="{% url 'logout' %}" style="color: rgb(27, 151, 253);">Log Out</a>
+        
+                {% else %}
+        
+                    <a href="{% url 'login' %}" style="color: rgb(27, 151, 253);">Log In</a>
+        
+                    <a href="{% url 'register' %}" style="color: rgb(27, 151, 253);">Register</a>
+        
+                {% endif %}
+
+                <img src="{% static '/network/twitter.png' %}" style="height: 50px; width: 60px;padding: 5px;">
+        
+            </div>
+          </div>
+  
+          
+        <div class="container-fluid">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

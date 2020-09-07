@@ -1,0 +1,134 @@
+textarea {
+    min-height: 100px;
+    min-width: 1335px;
+    background-color: whitesmoke;
+    padding: 20px;
+    color:black;
+    margin: 10px;
+    border-style: solid;
+    border-radius:40px;
+    border-color: rgb(27, 151, 253);
+}
+
+body{
+    padding: 5px;
+    color: rgb(27, 151, 253);
+    font-family: 'helvetica';
+}
+
+h2{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+h4{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+p{
+    color:black;
+}
+
+#posts{
+   background-color: white;
+   margin:20px;
+   padding:30px;
+   max-width: 1400px;
+   border-style: solid;
+   border-width: 1px;
+   border-radius:40px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-image: linear-gradient(to right, rgb(27, 151, 253) , white);
+    overflow: hidden;
+    color: white;
+    border-radius:40px;
+   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: rgb(27, 151, 253);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(27, 151, 253);
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+  color: black;
+}
+
+#box1{
+
+  float:left;
+  background-color: white;
+  height: 1000px;
+  width: 600px;
+
+  padding: 20px;
+  padding-bottom: 100px;
+
+  margin-left: 40px;
+  margin-top: 20px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius:40px;
+
+  overflow-y: scroll;
+
+}
+
+#box2{
+
+  float:left;
+  background-color: white;
+  height: 1000px;
+  width: 600px;
+
+  padding: 20px;
+  padding-bottom: 100px;
+
+  margin-left: 100px;
+  margin-top: 20px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius:40px;
+
+  overflow-y: scroll;
+
+}
+
+#edit{
+  margin-left: 10px;
+  
+}
+
+.twitter-timeline{
+
+  float:center;
+  width: 400px;
+  padding-bottom: 50px;
+}
